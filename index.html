@@ -410,7 +410,144 @@
             max-width: 760px;
         }
 
-        @media (max-width: 900px) {
+        .vr-section {
+            position: relative;
+            padding: 4rem 2rem;
+            background: url('images/banner.png') center/cover no-repeat;
+            color: #ffffff;
+        }
+
+        .vr-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(6, 22, 40, 0.64);
+            z-index: 1;
+        }
+
+        .vr-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1220px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .vr-text h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 0 0 1rem;
+            font-weight: 700;
+        }
+
+        .vr-text p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #f2f7ff;
+            margin: 0 0 1rem;
+            max-width: 540px;
+        }
+
+        .vr-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+        }
+
+        .vr-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 0.75rem;
+            color: #f6f8ff;
+        }
+
+        .vr-list li::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ffc000;
+            display: inline-block;
+        }
+
+        .btn-light {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: #fff;
+            color: #1a3d70;
+            border-radius: 999px;
+            padding: 0.75rem 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .vr-image-wrap {
+            position: relative;
+            border-radius: 22px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 18px 45px rgba(4, 23, 44, 0.42);
+        }
+
+        .vr-image-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .stat-badge {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid #ffc000;
+            border-radius: 14px;
+            color: #fff;
+            padding: 0.8rem 1rem;
+            min-width: 120px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .stat-badge span {
+            display: block;
+            font-size: 0.9rem;
+            color: #ffc000;
+        }
+
+        .stat-badge strong {
+            font-size: 2.1rem;
+            color: #fff;
+            display: block;
+            margin-top: 0.1rem;
+        }
+
+        .stat-badge.active {
+            right: 14px;
+            top: 18px;
+        }
+
+        .stat-badge.rate {
+            right: 140px;
+            top: 90px;
+        }
+
+        @media (max-width: 960px) {
+            .vr-content {
+                grid-template-columns: 1fr;
+            }
+
+            .vr-section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        .why-choose {
             .trusted-section .trusted-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -602,38 +739,66 @@
                 </div>
             </div>
         </section>
+<section class="why-choose" id="why-choose-us">
+    <div class="section-header">
+        <h2>Why Choose Us</h2>
+        <p>Comprehensive solutions designed for modern construction projects.</p>
+    </div>
+    <div class="features-grid">
+        <article class="feature-card">
+            <div class="feature-icon">🏷️</div>
+            <h3>Guaranteed Price Protection</h3>
+            <p>No hidden costs. No surprises. Transparent and detailed quotations before project start.</p>
+        </article>
+        <article class="feature-card">
+            <div class="feature-icon">✔️</div>
+            <h3>440+ Quality Checks</h3>
+            <p>Every stage of construction undergoes strict quality inspection.</p>
+        </article>
+        <article class="feature-card">
+            <div class="feature-icon">⏱️</div>
+            <h3>Timely Delivery</h3>
+            <p>Structured planning and milestone tracking to ensure on-time completion.</p>
+        </article>
+        <article class="feature-card">
+            <div class="feature-icon">💳</div>
+            <h3>Payment in Stages</h3>
+            <p>Pay in flexible construction-linked stages for financial convenience.</p>
+        </article>
+        <article class="feature-card">
+            <div class="feature-icon">📡</div>
+            <h3>24/7 Real-Time Tracking</h3>
+            <p>Monitor your project progress digitally from anywhere.</p>
+        </article>
+    </div>
+</section>
 
-        <section class="why-choose" id="why-choose-us">
-            <div class="section-header">
-                <h2>Why Choose Us</h2>
-                <p>Comprehensive solutions designed for modern construction projects.</p>
-            </div>
-            <div class="features-grid">
-                <article class="feature-card">
-                    <div class="feature-icon">🏷️</div>
-                    <h3>Guaranteed Price Protection</h3>
-                    <p>No hidden costs. No surprises. Transparent and detailed quotations before project start.</p>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon">✔️</div>
-                    <h3>440+ Quality Checks</h3>
-                    <p>Every stage of construction undergoes strict quality inspection.</p>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon">⏱️</div>
-                    <h3>Timely Delivery</h3>
-                    <p>Structured planning and milestone tracking to ensure on-time completion.</p>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon">💳</div>
-                    <h3>Payment in Stages</h3>
-                    <p>Pay in flexible construction-linked stages for financial convenience.</p>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon">📡</div>
-                    <h3>24/7 Real-Time Tracking</h3>
-                    <p>Monitor your project progress digitally from anywhere.</p>
-                </article>
+        <section class="vr-section">
+            <div class="vr-overlay"></div>
+            <div class="vr-content">
+                <div class="vr-text">
+                    <h2>Experience Your Project in Virtual Reality</h2>
+                    <p>Walk through your construction project before it's built. Our VR technology lets you visualize
+                        every detail, make changes in real-time, and ensure everything meets your expectations.</p>
+                    <ul class="vr-list">
+                        <li>Immersive 3D visualization</li>
+                        <li>Real-time modifications</li>
+                        <li>Multi-user collaboration</li>
+                        <li>Cost-saving insights</li>
+                    </ul>
+                    <a href="#consultation" class="btn-light">Book Free Consultation →</a>
+                </div>
+                <div class="vr-image-wrap">
+                    <img src="images/appartment.png" alt="Apartment project" />
+                    <div class="stat-badge active">
+                        <span>Active Projects</span>
+                        <strong>1,247</strong>
+                    </div>
+                    <div class="stat-badge rate">
+                        <span>Satisfaction rate</span>
+                        <strong>98%</strong>
+                    </div>
+                </div>
             </div>
         </section>
 
