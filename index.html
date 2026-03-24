@@ -245,6 +245,100 @@
                 font-size: 2.2rem;
             }
         }
+
+        .services-section {
+            padding: 4rem 2rem;
+            background: #f9fafc;
+            color: #0f1f39;
+            text-align: center;
+        }
+
+        .services-section .section-header h2 {
+            font-size: 2.4rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .services-section .section-header p {
+            max-width: 610px;
+            margin: 0 auto 2rem;
+            color: #4a5568;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            position: relative;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(15, 31, 57, 0.12);
+            overflow: hidden;
+            border: 1px solid #e8edf5;
+            text-align: left;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 28px rgba(15, 31, 57, 0.17);
+        }
+
+        .service-card::before,
+        .service-card::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            background: #f7a600;
+        }
+
+        .service-card::before {
+            top: 12px;
+            left: 12px;
+            transform: rotate(0deg);
+        }
+
+        .service-card::after {
+            bottom: 12px;
+            right: 12px;
+            transform: rotate(90deg);
+        }
+
+        .service-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-card h3 {
+            margin: 1rem;
+            font-size: 1.25rem;
+            color: #042a52;
+        }
+
+        .service-card p {
+            margin: 0 1rem 1rem;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -308,6 +402,44 @@
                         <button type="submit" class="btn-primary">Book Free Consultation</button>
                     </form>
                 </div>
+            </div>
+        </section>
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>High-quality construction services to make your next project a success.</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <img src="images/c1.png" alt="Residential Construction" />
+                    <h3>Residential Construction</h3>
+                    <p>Custom-built homes with quality materials and timely delivery.</p>
+                </article>
+                <article class="service-card">
+                    <img src="images/c2.png" alt="Commercial Construction" />
+                    <h3>Commercial Construction</h3>
+                    <p>Modern and durable spaces designed for business growth.</p>
+                </article>
+                <article class="service-card">
+                    <img src="images/c3.png" alt="Maintenance Services" />
+                    <h3>Maintenance Services</h3>
+                    <p>Complete repair and upkeep solutions for your property.</p>
+                </article>
+                <article class="service-card">
+                    <img src="images/c4.png" alt="Interior Planning & Designing" />
+                    <h3>Interior Planning & Designing</h3>
+                    <p>Create functional, stylish interiors with expert planning.</p>
+                </article>
+                <article class="service-card">
+                    <img src="images/c5.png" alt="Renovation & Remodeling" />
+                    <h3>Renovation & Remodeling</h3>
+                    <p>Transform your space with modern renovation solutions.</p>
+                </article>
+                <article class="service-card">
+                    <img src="images/c6.png" alt="Architectural Plans" />
+                    <h3>Architectural Plans</h3>
+                    <p>Detailed architectural drawing and project planning support.</p>
+                </article>
             </div>
         </section>
     </main>
