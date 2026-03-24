@@ -547,14 +547,158 @@
             }
         }
 
-        .why-choose {
-            .trusted-section .trusted-grid {
+        .how-it-works {
+            padding: 4rem 2rem;
+            background: #fff;
+            color: #0f1f39;
+            text-align: center;
+        }
+
+        .how-it-works .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 0.35rem;
+        }
+
+        .how-it-works .section-header p {
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: #4a5568;
+        }
+
+        .how-grid {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        /* Left column - odd steps stacked */
+        .how-col-left {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            padding-top: 0;
+        }
+
+        /* Right column - even steps stacked */
+        .how-col-right {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            padding-top: 6rem;
+        }
+
+        /* Center divider */
+        .how-divider {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .how-divider-line {
+            width: 2px;
+            flex: 1;
+            background: repeating-linear-gradient(to bottom,
+                    #f7a600 0px,
+                    #f7a600 8px,
+                    transparent 8px,
+                    transparent 18px);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        .how-num {
+            position: relative;
+            z-index: 1;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #f7a600;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(247, 166, 0, 0.35);
+        }
+
+        .how-num:last-child {
+            margin-bottom: 0;
+        }
+
+        .work-item {
+            text-align: left;
+        }
+
+        .work-item img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .work-item h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+            color: #f7a600;
+            font-weight: 700;
+        }
+
+        .work-item p {
+            margin: 0;
+            color: #4a5568;
+            line-height: 1.65;
+            font-size: 0.98rem;
+        }
+
+        /* Right col items: title+text on top, image below */
+        .how-col-right .work-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .how-col-right .work-item img {
+            order: 2;
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        .how-col-right .work-item .work-title {
+            order: 1;
+        }
+
+        @media (max-width: 900px) {
+            .how-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
 
-            .trusted-section .trusted-icon {
-                margin: 0 auto;
+            .how-col-right {
+                padding-top: 0;
+            }
+
+            .how-divider {
+                display: none;
+            }
+
+            .how-col-left,
+            .how-col-right {
+                gap: 2rem;
+            }
+
+            .how-col-right .work-item img {
+                order: 0;
+                margin-top: 0;
+                margin-bottom: 1rem;
             }
         }
 
@@ -739,39 +883,39 @@
                 </div>
             </div>
         </section>
-<section class="why-choose" id="why-choose-us">
-    <div class="section-header">
-        <h2>Why Choose Us</h2>
-        <p>Comprehensive solutions designed for modern construction projects.</p>
-    </div>
-    <div class="features-grid">
-        <article class="feature-card">
-            <div class="feature-icon">🏷️</div>
-            <h3>Guaranteed Price Protection</h3>
-            <p>No hidden costs. No surprises. Transparent and detailed quotations before project start.</p>
-        </article>
-        <article class="feature-card">
-            <div class="feature-icon">✔️</div>
-            <h3>440+ Quality Checks</h3>
-            <p>Every stage of construction undergoes strict quality inspection.</p>
-        </article>
-        <article class="feature-card">
-            <div class="feature-icon">⏱️</div>
-            <h3>Timely Delivery</h3>
-            <p>Structured planning and milestone tracking to ensure on-time completion.</p>
-        </article>
-        <article class="feature-card">
-            <div class="feature-icon">💳</div>
-            <h3>Payment in Stages</h3>
-            <p>Pay in flexible construction-linked stages for financial convenience.</p>
-        </article>
-        <article class="feature-card">
-            <div class="feature-icon">📡</div>
-            <h3>24/7 Real-Time Tracking</h3>
-            <p>Monitor your project progress digitally from anywhere.</p>
-        </article>
-    </div>
-</section>
+        <section class="why-choose" id="why-choose-us">
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+                <p>Comprehensive solutions designed for modern construction projects.</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3>Guaranteed Price Protection</h3>
+                    <p>No hidden costs. No surprises. Transparent and detailed quotations before project start.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">✔️</div>
+                    <h3>440+ Quality Checks</h3>
+                    <p>Every stage of construction undergoes strict quality inspection.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Timely Delivery</h3>
+                    <p>Structured planning and milestone tracking to ensure on-time completion.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Payment in Stages</h3>
+                    <p>Pay in flexible construction-linked stages for financial convenience.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>24/7 Real-Time Tracking</h3>
+                    <p>Monitor your project progress digitally from anywhere.</p>
+                </article>
+            </div>
+        </section>
 
         <section class="vr-section">
             <div class="vr-overlay"></div>
@@ -799,6 +943,92 @@
                         <strong>98%</strong>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>A streamlined process designed for efficiency and transparency.</p>
+            </div>
+            <div class="how-grid">
+
+                <!-- LEFT COLUMN: Steps 1, 3, 5 (image → title → text) -->
+                <div class="how-col-left">
+                    <div class="work-item">
+                        <img src="images/hw1.png" alt="Booking" />
+                        <div class="work-title">
+                            <h3>Booking</h3>
+                            <p>Secure your building construction project with us by paying a nominal booking fee of just
+                                0.5% of the total construction cost. This ensures a fixed per square foot price,
+                                protecting you from any fluctuations until project completion. Once booked, you'll
+                                receive a Order ID and gain access to a cutting-edge project dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <img src="images/hw3.png" alt="Design and Planning" />
+                        <div class="work-title">
+                            <h3>Design and Planning</h3>
+                            <p>Collaborate with our highly skilled architects to design your home that reflects your
+                                personal style and functional needs. Our design process incorporates the latest
+                                technology to develop precise architectural plans, which are then handed over to our
+                                experienced Civil Engineers.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <img src="images/hw5.png" alt="Home Construction" />
+                        <div class="work-title">
+                            <h3>Home Construction</h3>
+                            <p>Experience the construction of your dream home with our skilled team, utilizing
+                                state-of-the-art technology to ensure the highest standards of quality and safety.
+                                Benefit from continuous inspections with over 440+ quality checks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENTER DIVIDER with step numbers -->
+                <div class="how-divider">
+                    <div class="how-divider-line"></div>
+                    <div class="how-num">1</div>
+                    <div class="how-num">2</div>
+                    <div class="how-num">3</div>
+                    <div class="how-num">4</div>
+                    <div class="how-num">5</div>
+                    <div class="how-num">6</div>
+                </div>
+
+                <!-- RIGHT COLUMN: Steps 2, 4, 6 (title → text → image) -->
+                <div class="how-col-right">
+                    <div class="work-item">
+                        <div class="work-title">
+                            <h3>Technical Consultation</h3>
+                            <p>Share your vision for your dream home with our experienced architects. Leveraging
+                                advanced technology and extensive design & construction expertise, we provide tailored
+                                solutions that meet your specific requirements and budget, transforming your vision into
+                                a reality.</p>
+                        </div>
+                        <img src="images/hw2.png" alt="Technical Consultation" />
+                    </div>
+                    <div class="work-item">
+                        <div class="work-title">
+                            <h3>Design Approval & Start</h3>
+                            <p>Upon approval of the architectural plans, our AI seamlessly schedules the project and
+                                transitions it to the construction phase. Every detail is verified before breaking
+                                ground to ensure a smooth start.</p>
+                        </div>
+                        <img src="images/hw4.png" alt="Design Approval" />
+                    </div>
+                    <div class="work-item">
+                        <div class="work-title">
+                            <h3>Move-in</h3>
+                            <p>Move into your new home with a 10-year structural warranty. Our commitment to quality and
+                                customer satisfaction continues even after project completion. Post-construction, our
+                                experienced team is available for any service and maintenance needs.</p>
+                        </div>
+                        <img src="images/hw6.png" alt="Move-in" />
+                    </div>
+                </div>
+
             </div>
         </section>
 
