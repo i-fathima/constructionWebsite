@@ -12,3 +12,4 @@ async function includeHTML(id, url) {
 
 includeHTML('navbar-placeholder', 'components/navbar.html');
 includeHTML('footer-placeholder', 'components/footer.html');
+includeHTML('ready-placeholder', 'components/ready.html');

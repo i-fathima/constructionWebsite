@@ -58,15 +58,28 @@
             padding: 0 1.25rem;
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
+            gap: 4rem;
         }
 
         .project-card {
             background: #ffffff;
-            border: 1px solid #e8edf5;
+            border: 1px solid transparent;
             border-radius: 12px;
-            box-shadow: 0 10px 24px rgba(4, 23, 44, 0.06);
+            box-shadow: none;
             overflow: hidden;
+        }
+
+        .project-card-content a {
+            border: none;
+            color: #f79a00;
+            background: transparent;
+            padding: 0;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .project-card-content a:hover {
+            text-decoration: underline;
         }
 
         .project-card img {
@@ -118,29 +131,68 @@
         </div>
     </section>
 
+    <section class="project-filter">
+        <div class="filter-wrap">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Residential</button>
+            <button class="filter-btn">Commercial</button>
+            <button class="filter-btn">Interior</button>
+            <button class="filter-btn">Renovation</button>
+        </div>
+    </section>
+
     <section class="project-list">
         <article class="project-card">
-            <img src="images/c1.png" alt="Project 1" />
+            <img src="images/pr1.png" alt="Lakeview Villa – Chennai" />
             <div class="project-card-content">
-                <h3>Luxury Residential Tower</h3>
-                <p>High-rise living with premium amenities and smart infrastructure for upscale homeowners.</p>
+                <h3>Lakeview Villa – Chennai</h3>
+                <p>Chennai | 3,200 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
             </div>
         </article>
         <article class="project-card">
-            <img src="images/c2.png" alt="Project 2" />
+            <img src="images/pr2.png" alt="Metro Business Hub- Bangalore" />
             <div class="project-card-content">
-                <h3>Commercial Complex</h3>
-                <p>Modern workspace designs with energy-efficient systems and flexible floor plans.</p>
+                <h3>Metro Business Hub- Bangalore</h3>
+                <p>Bangalore | 12,000 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
             </div>
         </article>
         <article class="project-card">
-            <img src="images/c3.png" alt="Project 3" />
+            <img src="images/pr3.png" alt="Green Meadows Residence" />
             <div class="project-card-content">
-                <h3>Modern School Campus</h3>
-                <p>Safe and sustainable educational facilities combining innovation and durability.</p>
+                <h3>Green Meadows Residence</h3>
+                <p>Coimbatore | 2,400 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr4.png" alt="Skyline Retail Plaza" />
+            <div class="project-card-content">
+                <h3>Skyline Retail Plaza</h3>
+                <p>Hyderabad | 8,500 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr5.png" alt="Heritage Home Renovation" />
+            <div class="project-card-content">
+                <h3>Heritage Home Renovation</h3>
+                <p>Chennai | 1,800 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr6.png" alt="Palm Grove Apartments" />
+            <div class="project-card-content">
+                <h3>Palm Grove Apartments</h3>
+                <p>Trichy | 15,000 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
             </div>
         </article>
     </section>
+
+    <div id="ready-placeholder"></div>
 
     <div id="footer-placeholder"></div>
     <script src="components/insert-components.js"></script>
