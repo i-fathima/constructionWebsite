@@ -894,6 +894,72 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .banks-section {
+            padding: 4rem 2rem;
+            background: #fff;
+            text-align: center;
+            color: #0f1f39;
+        }
+
+        .banks-section h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin: 0 0 0.5rem;
+        }
+
+        .banks-section p {
+            margin: 0 0 2rem;
+            color: #67728a;
+            font-size: 1.05rem;
+        }
+
+        .banks-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .bank-card {
+            background: #ffffff;
+            border: 1px solid #dddddf;
+            border-radius: 12px;
+            padding: 0.9rem;
+            display: grid;
+            place-items: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .bank-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 22px rgba(15, 25, 45, 0.16);
+        }
+
+        .bank-card img {
+            max-width: 100%;
+            max-height: 68px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 1150px) {
+            .banks-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .banks-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banks-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -1198,6 +1264,21 @@
                     <strong>24/7</strong>
                     <span>Support Available</span>
                 </div>
+            </div>
+        </section>
+
+        <section class="banks-section" id="bank-partners">
+            <h2>Our Banking Partners</h2>
+            <p>Helping customers get easy access to construction and home loans with trusted financial institutions.</p>
+
+            <div class="banks-grid">
+                <div class="bank-card"><img src="images/bank1.webp" alt="Bank 1 logo" /></div>
+                <div class="bank-card"><img src="images/bank2.webp" alt="Bank 2 logo" /></div>
+                <div class="bank-card"><img src="images/bank3.webp" alt="Bank 3 logo" /></div>
+                <div class="bank-card"><img src="images/bank4.jpg" alt="Bank 4 logo" /></div>
+                <div class="bank-card"><img src="images/bank5.webp" alt="Bank 5 logo" /></div>
+                <div class="bank-card"><img src="images/bank6.webp" alt="Bank 6 logo" /></div>
+                <div class="bank-card"><img src="images/bank7.webp" alt="Bank 7 logo" /></div>
             </div>
         </section>
 
