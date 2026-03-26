@@ -960,6 +960,96 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .ready-section {
+            position: relative;
+            background: url('images/banner.png') center/cover no-repeat;
+            color: #ffffff;
+            padding: 4.5rem 1.5rem;
+            overflow: hidden;
+        }
+
+        .ready-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(4, 23, 44, 0.78);
+            mix-blend-mode: multiply;
+            z-index: 0;
+        }
+
+        .ready-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ready-content h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.85rem;
+            letter-spacing: 0.02em;
+        }
+
+        .ready-content p {
+            max-width: 760px;
+            margin: 0 auto 1.6rem;
+            color: #e2eaff;
+            font-size: 1.15rem;
+            line-height: 1.45;
+        }
+
+        .ready-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: #ffb000;
+            color: #0f1f39;
+            border: none;
+            border-radius: 999px;
+            padding: 0.85rem 1.6rem;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-decoration: none;
+        }
+
+        .ready-btn:hover {
+            background: #ffc300;
+        }
+
+        .ready-features {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        .ready-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f7f9ff;
+            font-size: 1rem;
+        }
+
+        .ready-feature::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ffb000;
+            box-shadow: 0 0 0 3px rgba(255, 176, 0, 0.22);
+        }
+
+        @media (max-width: 680px) {
+            .ready-features {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -1279,6 +1369,23 @@
                 <div class="bank-card"><img src="images/bank5.webp" alt="Bank 5 logo" /></div>
                 <div class="bank-card"><img src="images/bank6.webp" alt="Bank 6 logo" /></div>
                 <div class="bank-card"><img src="images/bank7.webp" alt="Bank 7 logo" /></div>
+            </div>
+        </section>
+
+        <section class="ready-section" id="ready">
+            <div class="ready-content">
+                <h2>Ready to Transform Your Construction Project?</h2>
+                <p>Join hundreds of successful projects built with premium materials, expert guidance, and unmatched
+                    reliability.
+                    Get started in minutes with our streamlined process.</p>
+
+                <a href="#consultation" class="ready-btn">Book Free Consultation →</a>
+
+                <div class="ready-features">
+                    <div class="ready-feature">ISO Certified</div>
+                    <div class="ready-feature">Quality Assured</div>
+                    <div class="ready-feature">Trusted Partner</div>
+                </div>
             </div>
         </section>
 
