@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construction Services</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #1b2c44;
+        }
+
+        .banner {
+            position: relative;
+            background: url('images/banner.png') center/cover no-repeat;
+            color: #f7b409;
+            min-height: 320px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(4, 23, 44, 0.65);
+            z-index: 0;
+        }
+
+        .banner .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 950px;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            letter-spacing: 0.02em;
+            font-weight: 800;
+        }
+
+        .banner p {
+            margin: 1rem auto 0;
+            max-width: 760px;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #e6ecff;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+        }
+
+        .residential-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .residential-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 14px 28px rgba(8, 23, 50, 0.16);
+        }
+
+        .residential-info h3 {
+            margin-top: 0;
+            font-size: 1.9rem;
+            color: #04172c;
+        }
+
+        .residential-info p {
+            margin: 1rem 0;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            color: #1f2d47;
+            line-height: 1.6;
+        }
+
+        .features-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #f7a600;
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            margin-top: 1.4rem;
+            padding: 0.82rem 1.5rem;
+            color: #04172c;
+            border: 2px solid #f79a00;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            background: #fff;
+        }
+
+        .btn-outline:hover {
+            background: #fff8e7;
+        }
+
+        @media (max-width: 900px) {
+            .residential-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Building Excellence Across Every Project</h1>
+            <p>At BluePeak Infra & Constructions, we provide end-to-end construction solutions from planning and design
+                to execution and handover. Our structured process and strict quality standards deliver reliable, lasting
+                results.</p>
+        </div>
+    </section>
+
+    <section class="section" id="residential">
+        <div class="section-title">
+            <h2>Residential Construction</h2>
+            <p>Crafting homes that last generations with the right materials and craftsmanship.</p>
+        </div>
+
+        <div class="residential-content">
+            <div class="residential-img">
+                <img src="images/c1.png" alt="Residential Construction" />
+            </div>
+            <div class="residential-info">
+                <h3>Crafting Homes That Last Generations</h3>
+                <p>We build independent houses, villas, duplex homes, and apartment units with superior quality
+                    materials and precision engineering.</p>
+                <ul class="features-list">
+                    <li>Custom architectural design</li>
+                    <li>Structural engineering & foundation work</li>
+                    <li>Premium material sourcing</li>
+                    <li>440+ stage-wise quality checks</li>
+                    <li>On-time project delivery</li>
+                    <li>Transparent cost estimation</li>
+                </ul>
+                <a href="#" class="btn-outline">Get Free Consultation</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
