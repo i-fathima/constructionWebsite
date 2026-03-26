@@ -769,6 +769,131 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .testimonial-section {
+            background: #071128;
+            color: #f5f9ff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .testimonial-section .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-section .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 0.45rem;
+            color: #fff;
+        }
+
+        .testimonial-section .section-header p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #c6d6ee;
+        }
+
+        .testimonial-card {
+            max-width: 940px;
+            margin: 0 auto 1.8rem;
+            background: rgba(15, 35, 70, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(1, 17, 40, 0.55);
+            text-align: left;
+            position: relative;
+        }
+
+        .testimonial-card .quote-icon {
+            position: absolute;
+            top: -14px;
+            left: 16px;
+            font-size: 3rem;
+            color: #ffc000;
+        }
+
+        .testimonial-card .stars {
+            margin: 0.4rem 0 1rem;
+            color: #ffc600;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-card blockquote {
+            margin: 0;
+            font-size: 1.18rem;
+            line-height: 1.7;
+            color: #e8f0ff;
+        }
+
+        .testimonial-card .client-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin-top: 1.4rem;
+        }
+
+        .testimonial-card .client-meta img {
+            width: 54px;
+            min-width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffc000;
+        }
+
+        .testimonial-card .client-meta .info h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .testimonial-card .client-meta .info p {
+            margin: 0.15rem 0 0;
+            color: #b8c9e3;
+        }
+
+        .testimonial-stats {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+            padding-top: 1.5rem;
+        }
+
+        .testimonial-stat {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 14px;
+            padding: 1rem;
+        }
+
+        .testimonial-stat strong {
+            display: block;
+            font-size: 2rem;
+            color: #ffd100;
+            line-height: 1;
+        }
+
+        .testimonial-stat span {
+            display: block;
+            margin-top: 0.4rem;
+            color: #d5e0ff;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 900px) {
+            .testimonial-stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .testimonial-stats {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -1029,6 +1154,50 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section class="testimonial-section" id="client-say">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Trusted by industry leaders across the construction sector.</p>
+            </div>
+
+            <article class="testimonial-card">
+                <div class="quote-icon" aria-hidden="true">“</div>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>
+                    “The real-time tracking feature was very helpful. We could monitor progress anytime and the team
+                    exceeded expectations in communication, quality, and on-time delivery. Highly recommended
+                    construction partner.”
+                </blockquote>
+
+                <div class="client-meta">
+                    <img src="images/clientFace.webp" alt="Client photo" />
+                    <div class="info">
+                        <h3>Karthik</h3>
+                        <p>Residential Construction – Chennai</p>
+                    </div>
+                </div>
+            </article>
+
+            <div class="testimonial-stats">
+                <div class="testimonial-stat">
+                    <strong>500+</strong>
+                    <span>Happy Clients</span>
+                </div>
+                <div class="testimonial-stat">
+                    <strong>1,200+</strong>
+                    <span>Projects Completed</span>
+                </div>
+                <div class="testimonial-stat">
+                    <strong>98.5%</strong>
+                    <span>Satisfaction Rate</span>
+                </div>
+                <div class="testimonial-stat">
+                    <strong>24/7</strong>
+                    <span>Support Available</span>
+                </div>
             </div>
         </section>
 
