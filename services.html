@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construction Services</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #1b2c44;
+        }
+
+        .banner {
+            position: relative;
+            background: url('images/banner.png') center/cover no-repeat;
+            color: #f7b409;
+            min-height: 320px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(4, 23, 44, 0.65);
+            z-index: 0;
+        }
+
+        .banner .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 950px;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            letter-spacing: 0.02em;
+            font-weight: 800;
+        }
+
+        .banner p {
+            margin: 1rem auto 0;
+            max-width: 760px;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #e6ecff;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+        }
+
+        .residential-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .residential-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 14px 28px rgba(8, 23, 50, 0.16);
+        }
+
+        .residential-info h3 {
+            margin-top: 0;
+            font-size: 1.9rem;
+            color: #04172c;
+        }
+
+        .residential-info p {
+            margin: 1rem 0;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: grid;
+            gap: 0.55rem;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            color: #1f2d47;
+            line-height: 1.6;
+        }
+
+        .features-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #f7a600;
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            margin-top: 1.4rem;
+            padding: 0.82rem 1.5rem;
+            color: #04172c;
+            border: 2px solid #f79a00;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            background: #fff;
+        }
+
+        .btn-outline:hover {
+            background: #fff8e7;
+        }
+
+        @media (max-width: 900px) {
+            .residential-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Building Excellence Across Every Project</h1>
+            <p>At BluePeak Infra & Constructions, we provide end-to-end construction solutions from planning and design
+                to execution and handover. Our structured process and strict quality standards deliver reliable, lasting
+                results.</p>
+        </div>
+    </section>
+
+    <section class="section" id="residential">
+
+
+        <div class="residential-content">
+            <div class="residential-img">
+                <img src="images/c1.png" alt="Residential Construction" />
+            </div>
+            <div>
+                <h2>Residential Construction</h2>
+                <h3>Crafting Homes That Last Generations</h3>
+                <p>We build independent houses, villas, duplex homes, and apartment units with superior quality
+                    materials and precision engineering.</p>
+                <ul class="features-list">
+                    <li>Custom architectural design</li>
+                    <li>Structural engineering & foundation work</li>
+                    <li>Premium material sourcing</li>
+                    <li>440+ stage-wise quality checks</li>
+                    <li>On-time project delivery</li>
+                    <li>Transparent cost estimation</li>
+                </ul>
+                <a href="#" class="btn-outline">Get Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="commercial">
+        <div class="residential-content" style="grid-template-columns: 1fr 1fr;">
+            <div>
+                <h2>Commercial Construction</h2>
+                <h3>Smart Infrastructure for Growing Businesses</h3>
+                <p>From office buildings to retail spaces and warehouses, we construct durable and scalable commercial
+                    structures with a focus on efficiency and safety.</p>
+                <ul class="features-list">
+                    <li>Office complexes</li>
+                    <li>Retail & showroom spaces</li>
+                    <li>Industrial buildings</li>
+                    <li>Structural steel construction</li>
+                    <li>Compliance & safety approvals</li>
+                    <li>Project timeline management</li>
+                </ul>
+                <a href="#" class="btn-outline">Discuss Your Project</a>
+            </div>
+            <div class="residential-img">
+                <img src="images/c2.png" alt="Commercial Construction" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="maintenance">
+        <div class="residential-content" style="grid-template-columns: 1fr 1fr;">
+            <div class="residential-img">
+                <img src="images/c3.png" alt="Maintenance Services" />
+            </div>
+            <div>
+                <h2>Maintenance Services</h2>
+                <h3>Protecting Your Investment</h3>
+                <p>We provide ongoing maintenance solutions to keep your property safe, functional, and efficient.
+                    Regular inspections and swift repairs reduce downtime and extend building lifespan.</p>
+                <ul class="features-list">
+                    <li>Electrical & plumbing repairs</li>
+                    <li>Structural inspections</li>
+                    <li>Waterproofing solutions</li>
+                    <li>Annual Maintenance Contracts (AMC)</li>
+                    <li>Emergency repair support</li>
+                </ul>
+                <a href="#" class="btn-outline">Request Maintenance</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="interior">
+        <div class="residential-content" style="grid-template-columns: 1fr 1fr;">
+            <div>
+                <h2>Interior Planning & Designing</h2>
+                <h3>Designed for Comfort & Functionality</h3>
+                <p>Our interior experts transform empty spaces into beautiful, functional environments tailored to your
+                    lifestyle or business needs.</p>
+                <ul class="features-list">
+                    <li>3D interior visualization</li>
+                    <li>Modular kitchen & wardrobe design</li>
+                    <li>False ceiling & lighting design</li>
+                    <li>Space optimization planning</li>
+                    <li>Material & finish selection</li>
+                </ul>
+                <a href="#" class="btn-outline">Start Designing</a>
+            </div>
+            <div class="residential-img">
+                <img src="images/c4.png" alt="Interior Planning & Designing" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="renovation">
+        <div class="residential-content" style="grid-template-columns: 1fr 1fr;">
+            <div class="residential-img">
+                <img src="images/c5.png" alt="Renovation & Remodeling" />
+            </div>
+            <div>
+                <h2>Renovation & Remodeling</h2>
+                <h3>Revive, Redesign, Reimagine</h3>
+                <p>Upgrade your existing property with modern layouts, structural enhancements, and fresh aesthetics.
+                </p>
+                <ul class="features-list">
+                    <li>Structural strengthening</li>
+                    <li>Layout modifications</li>
+                    <li>Exterior façade upgrade</li>
+                    <li>Interior remodeling</li>
+                    <li>Budget-friendly renovation plans</li>
+                </ul>
+                <a href="#" class="btn-outline">Plan Your Renovation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="architectural">
+        <div class="residential-content" style="grid-template-columns: 1fr 1fr;">
+            <div>
+                <h2>Architectural Plans & Approvals</h2>
+                <h3>Precision Planning for Perfect Execution</h3>
+                <p>Our architects create detailed technical drawings and handle required approvals to ensure smooth
+                    project execution.</p>
+                <ul class="features-list">
+                    <li>Architectural blueprints</li>
+                    <li>Structural drawings</li>
+                    <li>3D elevation designs</li>
+                    <li>Vastu planning (optional)</li>
+                    <li>Government approvals & documentation</li>
+                </ul>
+                <a href="#" class="btn-outline">Get Architectural Plan</a>
+            </div>
+            <div class="residential-img">
+                <img src="images/c6.png" alt="Architectural Plans & Approvals" />
+            </div>
+        </div>
+    </section>
+
+    <div id="ready-placeholder"></div>
+
+    <div id="footer-placeholder"></div>
+    <script src="components/insert-components.js"></script>
+</body>
+
+</html>

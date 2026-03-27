@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #1b2c44;
+        }
+
+        .mini-banner {
+            position: relative;
+            background: url('images/banner.png') center/cover no-repeat;
+            color: #fff;
+            min-height: 260px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .mini-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(4, 23, 44, 0.6);
+        }
+
+        .mini-banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 980px;
+        }
+
+        .mini-banner h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #f7a600;
+        }
+
+        .mini-banner p {
+            margin: 0.75rem auto 0;
+            max-width: 780px;
+            color: #f0f4ff;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .project-list {
+            max-width: 1200px;
+            margin: 2.5rem auto 3rem;
+            padding: 0 1.25rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 4rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            box-shadow: none;
+            overflow: hidden;
+        }
+
+        .project-card-content a {
+            border: none;
+            color: #f79a00;
+            background: transparent;
+            padding: 0;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .project-card-content a:hover {
+            text-decoration: underline;
+        }
+
+        .project-card img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 180px;
+        }
+
+        .project-card-content {
+            padding: 1rem;
+        }
+
+        .project-card-content h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+            color: #04172c;
+        }
+
+        .project-card-content p {
+            margin: 0;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1024px) {
+            .project-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            .project-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="mini-banner">
+        <div class="mini-banner-content">
+            <h1>Building Landmarks. Delivering Excellence.</h1>
+            <p>At BluePeak Infra & Constructions, every project reflects our commitment to quality, transparency, and
+                timely delivery. Explore our completed and ongoing projects across residential and commercial sectors.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-filter">
+        <div class="filter-wrap">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Residential</button>
+            <button class="filter-btn">Commercial</button>
+            <button class="filter-btn">Interior</button>
+            <button class="filter-btn">Renovation</button>
+        </div>
+    </section>
+
+    <section class="project-list">
+        <article class="project-card">
+            <img src="images/pr1.png" alt="Lakeview Villa – Chennai" />
+            <div class="project-card-content">
+                <h3>Lakeview Villa – Chennai</h3>
+                <p>Chennai | 3,200 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr2.png" alt="Metro Business Hub- Bangalore" />
+            <div class="project-card-content">
+                <h3>Metro Business Hub- Bangalore</h3>
+                <p>Bangalore | 12,000 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr3.png" alt="Green Meadows Residence" />
+            <div class="project-card-content">
+                <h3>Green Meadows Residence</h3>
+                <p>Coimbatore | 2,400 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr4.png" alt="Skyline Retail Plaza" />
+            <div class="project-card-content">
+                <h3>Skyline Retail Plaza</h3>
+                <p>Hyderabad | 8,500 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr5.png" alt="Heritage Home Renovation" />
+            <div class="project-card-content">
+                <h3>Heritage Home Renovation</h3>
+                <p>Chennai | 1,800 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+        <article class="project-card">
+            <img src="images/pr6.png" alt="Palm Grove Apartments" />
+            <div class="project-card-content">
+                <h3>Palm Grove Apartments</h3>
+                <p>Trichy | 15,000 Sq.ft</p>
+                <a href="#" class="btn-outline">View Project →</a>
+            </div>
+        </article>
+    </section>
+
+    <div id="ready-placeholder"></div>
+
+    <div id="footer-placeholder"></div>
+    <script src="components/insert-components.js"></script>
+</body>
+
+</html>
